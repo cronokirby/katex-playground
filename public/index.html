@@ -3,6 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+      integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X"
+      crossorigin="anonymous"
+    />
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Play around with KaTeX!" />
@@ -11,6 +18,32 @@
     <title>React App</title>
   </head>
   <body>
+    <script>
+      window.WebFontConfig = {
+        custom: {
+          families: [
+            "KaTeX_AMS",
+            "KaTeX_Caligraphic:n4,n7",
+            "KaTeX_Fraktur:n4,n7",
+            "KaTeX_Main:n4,n7,i4,i7",
+            "KaTeX_Math:i4,i7",
+            "KaTeX_Script",
+            "KaTeX_SansSerif:n4,n7,i4",
+            "KaTeX_Size1",
+            "KaTeX_Size2",
+            "KaTeX_Size3",
+            "KaTeX_Size4",
+            "KaTeX_Typewriter",
+          ],
+        },
+      };
+    </script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"
+      integrity="sha256-4O4pS1SH31ZqrSO2A/2QJTVjTPqVe+jnYgOWUVr7EEc="
+      crossorigin="anonymous"
+    ></script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
