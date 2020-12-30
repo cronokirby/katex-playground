@@ -6,7 +6,7 @@ interface KatexProps {
 }
 
 function Katex({ text }: KatexProps) {
-  const ref = React.useRef<HTMLDivElement | null>(null);
+  const ref = React.useRef<HTMLParagraphElement | null>(null);
   React.useEffect(() => {
     if (ref.current) {
       katex.render(text, ref.current, {
@@ -16,7 +16,7 @@ function Katex({ text }: KatexProps) {
     }
   }, [ref, text]);
 
-  return <div ref={ref}></div>;
+  return <p ref={ref}></p>;
 }
 
 function Editor() {
@@ -29,7 +29,9 @@ function Editor() {
         value={text}
         onChange={(e) => setText(e.target.value)}
       ></textarea>
-      <Katex text={text} />
+      <div className="w-full text-center">
+        <Katex text={text} />
+      </div>
     </div>
   );
 }

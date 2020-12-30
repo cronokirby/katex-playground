@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-size: 20px;
+}
+
+/* VERY IMPORTANT: fractions are borked otherwise in katex */
+*,
+::after,
+::before {
+  border-color: #000;
+}
