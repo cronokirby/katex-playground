@@ -1,7 +1,6 @@
 import React from "react";
 import katex from "katex";
 import Header from "./Header";
-import Logo from "./Logo";
 import Help from "./Help";
 
 interface KatexProps {
@@ -23,7 +22,7 @@ function Katex({ text }: KatexProps) {
 }
 
 function Editor() {
-  const [text, setText] = React.useState("\\sum_{i = 1}^{\\infty}");
+  const [text, setText] = React.useState("\\sum_{n = 1}^{\\infty} \\frac{1}{n}");
   return (
     <div className="flex flex-col items-center space-y-6 mt-8">
       <div className="px-4 py-2 bg-white rounded shadow-md w-11/12 md:w-10/12 lg:w-5/12">
