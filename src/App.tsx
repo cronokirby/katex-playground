@@ -1,5 +1,7 @@
 import React from "react";
 import katex from "katex";
+import Header from "./Header";
+import Logo from "./Logo";
 
 interface KatexProps {
   text: string;
@@ -24,7 +26,9 @@ function Editor() {
   return (
     <div className="flex flex-col items-center space-y-6 mt-8">
       <div className="px-4 py-2 bg-white rounded shadow-md w-11/12 md:w-10/12 lg:w-5/12">
-        <h2 className="mb-2 font-bold text-gray-600">KaTeX Input</h2>
+        <h2 className="mb-4 font-bold text-gray-600">
+          Math Input
+        </h2>
         <textarea
           className="h-64 sm:h-32 px-2 py-1 md:h-64 font-mono shadow-inner rounded bg-gray-50 w-full"
           style={{ resize: "none" }}
@@ -41,7 +45,12 @@ function Editor() {
 }
 
 function App() {
-  return <Editor />;
+  return (
+    <>
+      <Header />
+      <Editor />;
+    </>
+  );
 }
 
 export default App;
