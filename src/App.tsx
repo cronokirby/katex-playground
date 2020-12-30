@@ -22,14 +22,18 @@ function Katex({ text }: KatexProps) {
 function Editor() {
   const [text, setText] = React.useState("\\sum_{i = 1}^{\\infty}");
   return (
-    <div className="w-full h-screen">
-      <textarea
-        className="p-2 w-full h-64 font-mono bg-gray-100"
-        style={{ resize: "none" }}
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-      ></textarea>
-      <div className="w-full text-center">
+    <div className="flex flex-col items-center space-y-6 mt-8">
+      <div className="px-4 py-2 bg-white rounded shadow-md w-11/12 md:w-10/12 lg:w-5/12">
+        <h2 className="mb-2 font-bold text-gray-600">KaTeX Input</h2>
+        <textarea
+          className="h-64 sm:h-32 px-2 py-1 md:h-64 font-mono shadow-inner rounded bg-gray-50 w-full"
+          style={{ resize: "none" }}
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+        ></textarea>
+      </div>
+
+      <div className="text-center w-11/12 md:w-10/12 lg:w-5/12 p-4 bg-white rounded shadow-md">
         <Katex text={text} />
       </div>
     </div>
